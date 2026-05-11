@@ -4,12 +4,12 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>BXRBERS · Premium Barbershop in Gatley, Manchester</title>
-<meta name="description" content="BXRBERS — Gatley's highest-rated barbershop. Classic cuts, modern fades, beard work. 5.0 stars from 463 reviews on Booksy. Book online or walk in. 87 Silverdale Road, Gatley, SK8 4RF.">
+<meta name="description" content="BXRBERS — Gatley's highest-rated barbershop. Classic cuts, modern fades, beard work. 5.0 stars from 504 reviews on Booksy. Book online or walk in. 87 Silverdale Road, Gatley, SK8 4RF.">
 <meta name="keywords" content="barber Gatley, barbershop Gatley, barber Cheadle, barber Stockport, fade haircut Gatley, beard trim Gatley, kids barber Gatley, best barber Manchester, 5 star barber Gatley">
 <meta name="robots" content="index, follow">
 <link rel="canonical" href="https://www.bxrbers.co.uk">
 <meta property="og:title" content="BXRBERS · Premium Barbershop in Gatley, Manchester">
-<meta property="og:description" content="Where the craft is taken seriously. And so are you. 5.0 stars · 463 reviews · 87 Silverdale Road, Gatley.">
+<meta property="og:description" content="Where the craft is taken seriously. And so are you. 5.0 stars · 504 reviews · 87 Silverdale Road, Gatley.">
 <meta property="og:type" content="business.business">
 <meta property="og:url" content="https://www.bxrbers.co.uk">
 <meta property="og:locale" content="en_GB">
@@ -409,7 +409,7 @@ section { padding: 8rem 4rem; }
   border-bottom: 1px solid rgba(201,168,76,0.12);
   position: relative;
   transition: background 0.3s;
-  cursor: default;
+  cursor: pointer;
   display: flex;
   flex-direction: column;
 }
@@ -458,6 +458,12 @@ section { padding: 8rem 4rem; }
   border-bottom: 1px solid rgba(201,168,76,0.3);
   padding-bottom: 0.15rem;
   transition: border-color 0.2s, color 0.2s;
+}
+.svc-book::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  z-index: 1;
 }
 .svc-book:hover { color: var(--cream); border-color: var(--cream); }
 .after-badge {
@@ -700,14 +706,17 @@ section { padding: 8rem 4rem; }
 }
 .reviews-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(6, 1fr);
   gap: 1.2rem;
 }
 .review-card {
+  grid-column: span 2;
   border: 1px solid rgba(201,168,76,0.1);
   padding: 2.2rem;
   transition: border-color 0.25s;
 }
+.review-card:nth-child(4) { grid-column: 2 / 4; }
+.review-card:nth-child(5) { grid-column: 4 / 6; }
 .review-card:hover { border-color: rgba(201,168,76,0.3); }
 .rev-stars { color: var(--gold); font-size: 0.7rem; letter-spacing: 0.12em; margin-bottom: 1.1rem; }
 .rev-text {
@@ -1157,6 +1166,11 @@ footer {
     grid-template-columns: 1fr;
     gap: 1rem;
   }
+  .review-card,
+  .review-card:nth-child(4),
+  .review-card:nth-child(5) {
+    grid-column: 1 / -1;
+  }
 
   /* ── VISIT ── */
   .visit-grid {
@@ -1406,7 +1420,7 @@ footer {
       "description": "Premium barbershop in Gatley, Manchester. Classic cuts, modern fades, beard work. Where the craft is taken seriously. And so are you.",
       "url": "https://www.bxrbers.co.uk",
       "telephone": "+447542155510",
-      "email": "info@bxrbers.com",
+      "email": "info@bxrbers.co.uk",
       "image": [
         "https://www.bxrbers.co.uk/og-image.jpg"
       ],
@@ -1450,7 +1464,7 @@ footer {
       "aggregateRating": {
         "@type": "AggregateRating",
         "ratingValue": "5.0",
-        "reviewCount": "463",
+        "reviewCount": "504",
         "bestRating": "5",
         "worstRating": "1"
       },
@@ -1587,7 +1601,7 @@ footer {
       BXRBERS
       <em class="italic-line">Where the craft is taken seriously.</em>
     </h1>
-    <p class="hero-sub">Not your average barbershop. Never was meant to be. Classic cuts, modern fades, beard work. Every client gets someone who genuinely cares about getting it right.</p>
+    <p class="hero-sub">Not your average barbershop. It was never meant to be. Classic cuts, modern fades, beard work. Every client gets someone who genuinely cares about getting it right.</p>
     <div class="hero-actions">
       <a class="btn-book" href="https://booksy.com/en-gb/38989_bxrbers_barber-shop_41921_gatley" target="_blank" target="_blank">Book Your Chair</a>
       <a class="btn-ghost" href="#services">See Services</a>
@@ -1596,7 +1610,7 @@ footer {
   <div class="hero-stat">
     <div class="hero-stat-stars">★ ★ ★ ★ ★</div>
     <div class="hero-stat-num">5<span>.0</span></div>
-    <div class="hero-stat-label">463 Reviews · Booksy</div>
+    <div class="hero-stat-label">504 Reviews · Booksy</div>
   </div>
 </div>
 
@@ -1627,7 +1641,7 @@ footer {
       <div class="section-label">About</div>
       <h2 class="about-headline">Honouring<br>the craft.<br><em>Pushing it forward.</em></h2>
       <div class="about-body">
-        <p>BXRBERS isn't your average barbershop. It never was meant to be. We built this place because we knew what was missing. Not just a better cut, but a better experience.</p>
+        <p>BXRBERS isn't your average barbershop. It was never meant to be. We built this place because we knew what was missing. Not just a better cut, but a better experience.</p>
         <p>Classic cuts, modern fades, beard work. We've put the hours in across all of it. Every client that sits in our chair gets the same thing: someone who genuinely cares about getting it right.</p>
         <p>Student, professional, or anyone in between. Everyone gets the same chair, the same attention, the same standard. That's not a policy. That's just how we work.</p>
       </div>
@@ -1775,24 +1789,34 @@ footer {
     <div>
       <div class="section-label">What They Say</div>
       <div class="reviews-score">5<span>.0</span></div>
-      <div class="reviews-sub">462 of 463 reviews · Five Stars · Verified via Booksy</div>
+      <div class="reviews-sub">504 reviews · Five Stars · Verified via Booksy</div>
     </div>
     <div class="reviews-source">@bxrbers<br>on Booksy</div>
   </div>
   <div class="reviews-grid">
     <div class="review-card">
       <div class="rev-stars">★★★★★</div>
-      <p class="rev-text">"Best barbershop I've been to. The attention to detail is second to none. I won't go anywhere else."</p>
+      <p class="rev-text">"It was a really chilled atmosphere."</p>
       <div class="rev-author">Verified Client · Booksy</div>
     </div>
     <div class="review-card">
       <div class="rev-stars">★★★★★</div>
-      <p class="rev-text">"The space is incredible. Felt like somewhere you actually want to spend time. And the cut was perfect."</p>
+      <p class="rev-text">"Fantastic and friendly service."</p>
       <div class="rev-author">Verified Client · Booksy</div>
     </div>
     <div class="review-card">
       <div class="rev-stars">★★★★★</div>
-      <p class="rev-text">"Kareem knew exactly what I wanted before I'd even finished explaining. That's craft. That's BXRBERS."</p>
+      <p class="rev-text">"Lovely fella who keeps it nice and chill whilst delivering a professional cut."</p>
+      <div class="rev-author">Verified Client · Booksy</div>
+    </div>
+    <div class="review-card">
+      <div class="rev-stars">★★★★★</div>
+      <p class="rev-text">"Great service as always, best haircuts I've ever had."</p>
+      <div class="rev-author">Verified Client · Booksy</div>
+    </div>
+    <div class="review-card">
+      <div class="rev-stars">★★★★★</div>
+      <p class="rev-text">"Great place and atmosphere for a hair cut. As always looked after and leaving with a great hair cut."</p>
       <div class="rev-author">Verified Client · Booksy</div>
     </div>
   </div>
@@ -1863,10 +1887,10 @@ footer {
     <div>
       <div class="footer-col-title">Contact</div>
       <ul class="footer-links">
-        <li><a href="mailto:info@bxrbers.com">info@bxrbers.com</a></li>
+        <li><a href="mailto:info@bxrbers.co.uk">info@bxrbers.co.uk</a></li>
         <li><a href="tel:+447542155510">+44 7542 155510</a></li>
         <li><a href="https://booksy.com/en-gb/38989_bxrbers_barber-shop_41921_gatley" target="_blank" target="_blank">Book on Booksy</a></li>
-        <li><a href="mailto:careers@bxrbers.com">careers@bxrbers.com</a></li>
+        <li><a href="mailto:bookings@bxrbers.co.uk">bookings@bxrbers.co.uk</a></li>
       </ul>
     </div>
   </div>
